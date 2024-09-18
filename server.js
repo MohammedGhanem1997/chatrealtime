@@ -10,6 +10,8 @@ server.listen(process.env.PORT||3001, () => {
 });
 
 io.on('connection', socket => {
+  console.log("user in soket->", socket.id);
+  
   socket.on('user-connect', async (userData) => {
   	userData.socketId = socket.id;
   	usersArray.push(userData);
