@@ -5,7 +5,7 @@ const Message = require('./app/models/Message');
 
 const usersArray = [];
 
-server.listen(3001, () => {
+server.listen(process.env.PORT||3001, () => {
   console.log('Running on port 3001');
 });
 
